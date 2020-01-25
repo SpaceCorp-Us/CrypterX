@@ -35,16 +35,24 @@
 <div style="width:99%; height:25px; text-align:center;">&nbsp;</div>
 
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready( function() {
         $("#key").focus();
-
-        $("#button-dec").on("click", function() {
-            decryptFormText();
-        });
-
-		$("#decrypted").on("click", function() {
-			$(this).select();
-		});
-		//
     });
+
+	$("#button-dec").on("click", function() {
+		decryptFormText();
+	});
+
+	$("#decrypted").on("click", function() {
+		$(this).select();
+	});
+
+	$("#key").on("focusin", function() {
+		$("#key").prop("type", "text");
+	});
+
+	$("#key").on("focusout", function() {
+		$("#key").prop("type", "password");
+	});
+
 </script>

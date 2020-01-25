@@ -51,4 +51,10 @@ div {
 	background-position: center;
 	box-shadow: 0px 0px 15px #000;
 	border-radius: 100%;
+	transition: 3s ease-in;
+}
+
+.splashImage:hover {
+	opacity: 0.0;
+	transition: 1s ease-out;
 }

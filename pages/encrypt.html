@@ -10,7 +10,7 @@
 		<div class="contentBox">
 			<div style="margin:0px 10px; clear:both;">Key to Encrypt Text with. (Using shown Pattern is Recommended)</div>
 			<div class="fields"><label class="field" style="background:rgba(250,250,250,0.75);">KEY</label>
-				<input id="key" name="key" class="field" type="text" placeholder="something####secret####"/>
+				<input id="key" name="key" class="field" type="" placeholder="something####secret####"/>
 			</div>
 		</div>
 		<div class="contentBox">
@@ -37,14 +37,22 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#key").focus();
-		//
-		$("#button-enc").click(function() {
-			encryptFormText();
-		});
-		//
-		$("#text2dec").on("click", function () {
-			$(this).select();
-		});
-		//
 	});
+
+	$("#button-enc").on("click", function() {
+		encryptFormText();
+	});
+
+	$("#text2dec").on("click", function() {
+		$(this).select();
+	});
+
+	$("#key").on("focusin", function() {
+		$("#key").prop("type", "text");
+	});
+
+	$("#key").on("focusout", function() {
+		$("#key").prop("type", "password");
+	});
+
 </script>
