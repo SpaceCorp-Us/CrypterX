@@ -1,0 +1,54 @@
+
+@font-face {
+	font-family:FedStarFleet;
+	src: url("../fonts/Federation_Starfleet.TTF") format('truetype');
+}
+
+.btn {
+    margin: 5px;
+}
+
+/*===================================================================*/
+
+.centerObject {
+	width: 100%; height: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.titleText {
+	font-size: 32pt;
+	text-shadow: 4px 4px 3px black;
+}
+
+.vertContent {
+	display: flex;
+	flex-direction: column;
+}
+
+/*===================================================================*/
+
+.round8 {
+	border-radius:8px;
+}
+
+.round10 {
+	border-radius:10px;
+}
+
+.round15 {
+	border-radius:15px;
+}
+
+.round20 {
+	border-radius:20px;
+}
+
+hr {
+	margin-top:5px; margin-bottom:5px;
+}
+
+.captionText {
+	font-size: 24pt;
+}

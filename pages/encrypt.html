@@ -1,0 +1,50 @@
+
+<script type="text/javascript" src="js/jsencryption.js"></script>
+<script type="text/javascript" src="js/jsencryptionform.js"></script>
+
+<form name="encForm" class="container round20" action="">
+	<div class="header roundTop8 delete-mode">
+		<div class="captionText">Encryption Tool</div>
+	</div>
+	<div class="formContent">
+		<div class="contentBox">
+			<div style="margin:0px 10px; clear:both;">Key to Encrypt Text with. (Using shown Pattern is Recommended)</div>
+			<div class="fields"><label class="field" style="background:rgba(250,250,250,0.75);">KEY</label>
+				<input id="key" name="key" class="field" type="text" placeholder="something####secret####"/>
+			</div>
+		</div>
+		<div class="contentBox">
+			<div class="fields" style="padding:5px 10px;">
+				<label style="float:left; margin:3px;">Input Plain Text Here</label>
+				<textarea id="text2enc" name="text2enc" rows="8" cols="50" placeholder="Text to Encrypt goes Here"></textarea>
+				<button id="button-enc" class="button-rounded button-std" style="float:right;" type="button">Encrypt</button>
+			</div>
+		</div>
+		<div id="encryptedBox" class="contentBox">
+			<div class="fields" style="padding:5px 10px;">
+				<label style="float:left; margin:3px;">Encrypted Text will appear Here</label>
+				<textarea id="text2dec" name="text2dec" rows="8" cols="50"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="footer roundBottom8 delete-mode">
+		<label style="float:left; margin:3px;">Secure Encryption, No data ever leaves your PC. (Fully Client-Side Processing)</label>
+	</div>
+</form>
+
+<div style="width:99%; height:25px; text-align:center;">&nbsp;</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#key").focus();
+		//
+		$("#button-enc").click(function() {
+			encryptFormText();
+		});
+		//
+		$("#text2dec").on("click", function () {
+			$(this).select();
+		});
+		//
+	});
+</script>

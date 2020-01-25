@@ -1,0 +1,54 @@
+
+@import url("default/layout.css");
+@import url("default/buttons.css");
+@import url("default/special.css");
+@import url("default/forms.css");
+
+body {
+	font-family: Arial;
+	color:#FFF;
+}
+
+#body-main {
+	background:rgba(0,0,0,1.0); background-image:url("backdrops/backdrop.jpg");
+	background-size:cover; background-attachment:fixed; background-position:center;
+}
+
+.test { background:url("graphics/test.png"); }
+/*
+div {
+	border: 1px dashed hotpink;
+}
+*/
+/*===============================================================*/
+
+#mainTitle {
+	margin-top:2.5%; margin-left:2%;
+	font-size:45pt; font-family:FedStarFleet;
+	text-align:center; text-shadow: 6px 8px 4px black;
+}
+
+.logo-main {
+	width: 112px; height: 90px;
+	background:url("default/home.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 106%;
+	border: 2px solid #AAA; border-radius: 10px;
+	margin-bottom: -20px;
+	z-index: 20;
+}
+
+.logo-main:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 20px #CF0;
+}
+
+.splashImage {
+	width: 300px; height: 300px;
+	background-image: url("default/Starfleet_Command.png");
+	background-size: 108%;
+	background-position: center;
+	box-shadow: 0px 0px 15px #000;
+	border-radius: 100%;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CrypterX</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="icon" type="image/png" href="css/default/icon.png"/>
+        <script type="text/javascript" src="js/jquery-latest.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    </head>
+    <body id="body-main">
+        <div id="rowA" class="rowA">
+            <div id="rowAcolA" class="colA">
+                <div class="logo-main" onClick="window.open('./index.html','_top');return false;" title="HOME"></div>
+            </div>
+            <div id="rowAcolB" class="colB">
+                <div id="mainTitle">CrypterX</div>
+            </div>
+            <div id="rowAcolC" class="colC">
+                <div class="button-rounded button-dis" onClick="loadLogin();">LOGIN</div>
+            </div>
+        </div>
+
+        <div id="rowB" class="rowB">
+            <div id="rowBcolA" class="colA"></div>
+            <div id="rowBcolB" class="colB"></div>
+            <div id="rowBcolC" class="colC"></div>
+        </div>
+
+        <div id="rowC" class="rowC">
+            <div id="rowCcolA" class="rowC colA"></div>
+            <div id="rowCcolB" class="rowC colB"></div>
+            <div id="rowCcolC" class="rowC colC"></div>
+        </div>
+
+        <div id="rowD" class="rowD">
+            <div id="rowDcolA" class="colA"></div>
+            <div id="rowDcolB" class="colB">Coptright &copy 2020 United Federation of Earth, All Rights Reserved.</div>
+            <div id="rowDcolC" class="colC"></div>
+        </div>
+
+        <div id="rowE" class="rowE">
+            <div id="rowEcolA" class="colA"></div>
+            <div id="rowEcolB" class="colB">Because together, We Truly can do Anything</div>
+            <div id="rowEcolC" class="colC">0000000</div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("div").on("click", function(event) {
+                    event.stopPropagation();
+                });
+                adjustElem();
+                $(window).bind("resize", adjustElem);
+                $('#rowCcolA').load("pages/menu_left.html");
+                $('#rowCcolB').load("pages/splash.html");
+            });
+            //
+            function loadEncrypt() {
+                $('#rowCcolB').load("pages/encrypt.html");
+            }
+            //
+            function loadDecrypt() {
+                $('#rowCcolB').load("pages/decrypt.html");
+            }
+            //
+            function loadLogin() {
+                $('#rowCcolB').load("pages/login.html");
+            }
+            //
+            function adjustElem() {
+                var mHeight = $(window).height();
+                var rowA = $("#rowA").height();
+                var rowB = $("#rowB").height();
+                var rowD = $("#rowD").height();
+                var rowE = $("#rowE").height();
+                var rows = (rowA + rowB + rowD + rowE);
+                $(".rowC").css("height", (mHeight - rows) + "px");
+            }
+        </script>
+
+    </body>
+</html>
